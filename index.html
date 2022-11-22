@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Profile card component</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      background-color: #19a1ad;
+      overflow: hidden;
+      height: 80vh;
+    }
+    .top {
+      background-repeat: no-repeat;
+      position: absolute;
+      top: -550px;
+      left: -100px;
+    }
+    .bott {
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: -550px;
+      right: -100px;
+      overflow: hidden;
+    }
+    @media (max-width: 767px) {
+      .top  {
+        top: -150px;
+        left: -150px;
+      }
+    }
+    @media (max-width: 767px) {
+      .bott  {
+        bottom: -187px;
+        right: -185px;
+      }
+    }
+    @media (max-width: 767px) {
+      .top img , 
+      .bott img {
+        width: 500px;
+        height: 500px;
+      }
+    }
+    .header {
+      width: 350px;
+      margin: 150px auto 0;
+      overflow: hidden;
+    }
+    .card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      color: #30344d;
+      background-color: white;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .content img {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 7px solid white;
+      border-radius: 50%;
+    }
+    .content h1 {
+      margin-top: 70px;
+      margin-bottom: 0;
+      font-size: 24px;
+    }
+    .content h1 span {
+      color: #777;
+      font-weight: 300;
+    }
+    .content h3 {
+      color: #777;
+      font-weight: 300; 
+      font-size: 17px;
+      margin-bottom:20px ;
+      position: relative;
+    }
+    .content h3::after {
+      content: '';
+      width: 350px;
+      height: 1px;
+      position: absolute;
+      background-color: rgb(230, 226, 226);
+      bottom: -23px;
+      left: -146px;    
+    }
+    .bottom {
+      display: flex;
+      justify-content:space-between;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .bottom .followers {
+      text-align: center;
+    }
+    .bottom .followers h2 {
+      font-weight: bold;
+      margin: 30px 0 10px;
+    }
+    .bottom .followers h3 {
+      font-weight: 300;
+      font-size: 13px;
+      margin: 0 0 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <img src="./images/bg-pattern-top.svg" alt="">
+  </div>
+  <div class="bott">
+    <img src="./images/bg-pattern-bottom.svg" alt="">
+  </div>
+  <div class="header">
+    <div class="card">
+      <div class="image">
+        <img src="./images/bg-pattern-card.svg" alt="">
+      </div>
+      <div class="content">
+        <img src="./images/image-victor.jpg" alt="">
+        <h1>Victor Crest <span>26</span></h1>
+        <h3>London</h3>
+      </div>
+      <div class="bottom">
+        <div class="followers">
+          <h2>80K</h2>
+          <h3>Followers</h3>
+        </div>
+        <div class="followers">
+          <h2>803K</h2>
+          <h3>Likes</h3>
+        </div>
+        <div class="followers">
+          <h2>1.4K</h2>
+          <h3>Photos</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.facebook.com/abdoismael0" style="color: red;">Bodda</a>.
+  </div>
+</body>
+</html>
